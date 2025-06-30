@@ -1,0 +1,4 @@
+[package]
+org = "anupama"
+name = "hospitalmgmtsystem"
+version = "0.1.0"
