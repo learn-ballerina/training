@@ -1,26 +1,28 @@
 # training Material
 
-Clone this repository to local path using the command below.
-
-```
-git clone https://github.com/learn-ballerina/training.git
-```
-
 ## Run hello world service in Devant
 
 1. Give the Git URL of following public repository in Devant
 
-```
-https://github.com/learn-ballerina/training/
-```
+    ```
+    https://github.com/learn-ballerina/training
+    ```
 
 2. Select the branch `main` and path `hello_world`.
 
-## Run sample Hospital management service in WSO2 Integrator:BI
+3. Select Technology as `WSO2 Integrator: BI` and Type as `Integration as API`.
 
-Open the project root directory as follows. 
+## Try sample Hospital management service in WSO2 Integrator:BI
 
-```
-cd hospitalmgmtsystem
-code .
-```
+1. Clone this repository to local path using the command below.
+
+    ```
+    git clone https://github.com/learn-ballerina/training.git
+    ```
+
+2. Open the project root directory as follows. 
+
+    ```
+    cd hospitalmgmtsystem
+    code .
+    ```
