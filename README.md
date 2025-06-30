@@ -26,3 +26,8 @@
     cd hospitalmgmtsystem
     code .
     ```
+
+## External Resources:
+
+1. [Create GitHub Account](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github)
+2. [Workding with GitHub in VS Code](https://code.visualstudio.com/docs/sourcecontrol/github)
