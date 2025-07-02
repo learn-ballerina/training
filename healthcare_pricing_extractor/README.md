@@ -4,7 +4,7 @@ Healthcare Pricing Extractor processes Machine-Readable Files (MRFs) published b
 
 The extracted data is exported to a CSV file for easy access via Excel or BI tools, and optionally persisted into a database for reporting, compliance monitoring, or integration with downstream data pipelines.
 
-### insert diagram
+![alt text](demo-diagram.png)
 
 ## Sample MRF files
 
@@ -33,8 +33,9 @@ This will create a set of records.
 
 We'll use the `onCreate` remote function that gets added by deafult.
 
-### 4. Create a configurable variable to hold the directory path for incoming MRF files
-- type `string` to hold `incomingMRFPath`
+### 4. Create a configurable variable
+
+- `incomingMRFPath` : to hold the directory path for incoming MRF files (type `string`)
 - default path: `./mrf-files/incoming`
 
 Assign it as the path for the directory service.
@@ -80,7 +81,13 @@ from Out_of_networkItem item in healthEvent.out_of_network
     select mapOutNetworkItem(item, paymentsItem.allowed_amount, provider.billed_charge, provider.npi.toString());
 ```
 
-### 10. Create a function `getCsvFileName` to derive csvFileName from the mrf file name
+### 10. Create a configurable variable
+
+- `processedCsvPath` : to hold the directory path for processed csv files (type `string`)
+- default path: `./processed-csv-files/`
+
+
+### 11. Create a function `getCsvFilePath` to derive csvFilePath from the mrf file name
  
 - input: `string` mrf file name
 - output: `string` csv file name
@@ -90,15 +97,51 @@ from Out_of_networkItem item in healthEvent.out_of_network
 startIndex: mrfFilePath.lastIndexOf("/") ?: 0
 endIndex: mrfFilePath.length() - 5
 
-- return csvFileName
+- return csvFilePath
 
 ```
-mrfFilePath.substring(startIndex, lastIndex) + ".csv"
+processedCsvPath + mrfFilePath.substring(startIndex, lastIndex) + ".csv"
 ```
 
-### 10. Design `processHealthEventMrf` function from step 8
+### 12. Design `processHealthEventMrf` function from step 8
 
 - Call the data mapper `mapHealthEventToCsv`
 - Call `io : fileWriteCsv` with the following inputs
     path: csvFileName (call `getCsvFileName` step 10 to get this)
     content: `HealthEventCsv[]`
+
+### 13. Push to FHIR Server
+
+- create a data mapper to do the MRF to fhir:Claim transformation
+- Create fhir connector
+- call `create` remote function to push the FHIR claims to FHIR Server
+
+### 14. Persist health event details to database
+
+- Create a database to hold the `insuarance_pricing`
+
+- Create the below table `out_of_network_rates` to hold details
+
+```
+CREATE TABLE out_of_network_rates (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    billing_code VARCHAR(20),
+    code_type VARCHAR(20),
+    description TEXT,
+    allowed_amount DECIMAL(10,2),
+    billed_charge DECIMAL(10,2),
+    provider_npi VARCHAR(20),
+    ingestion_date DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+- Create a MYSQL database connector
+  Provide configurations to Connect to above database
+
+- Create a function that executes inserts to the db table.
+
+### 15. Update the `processHealthEventMrf` function from step 10
+
+- Call the `pushToFHIRServer` function
+- For each data item call `persistToDatabase`

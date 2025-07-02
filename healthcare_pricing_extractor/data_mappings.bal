@@ -17,6 +17,7 @@ function mapOutNetworkItem(Out_of_networkItem outNetworkItem, decimal allowedAmo
     billing_code_type: outNetworkItem.billing_code_type
 };
 
+
 function mapHealthEventToFhirClaim(HealthEvent healthEvent) returns international401:Claim => {
     insurance: [],
     provider: {

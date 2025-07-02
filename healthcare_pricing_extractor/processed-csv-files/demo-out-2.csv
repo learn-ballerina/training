@@ -1,0 +1,11 @@
+name,allowed_amount,billed_charge,npi,billing_code,billing_code_type,description
+DEMO SERVICE 1,85.00,150.00,[1234567890],99213,CPT,"Office visit, established patient"
+DEMO SERVICE 2,32.00,70.00,[1122334455],87070,CPT,"Culture, bacterial; any source"
+DEMO SERVICE 3,95.50,180.00,[5566778899],80050,CPT,General health panel
+DEMO SERVICE 4,15.00,50.00,[6677889900],81001,CPT,"Urinalysis, automated"
+DEMO SERVICE 5,45.00,110.00,[9988776655],93000,CPT,Electrocardiogram
+DEMO SERVICE 6,105.00,160.00,[1112223334],99203,CPT,"New patient office visit, 30 min"
+DEMO SERVICE 7,10.00,40.00,[2233445566],36415,CPT,"Venipuncture, routine"
+DEMO SERVICE 8,420.00,800.00,[3344556677],74177,CPT,CT scan abdomen/pelvis
+DEMO SERVICE 9,35.00,75.00,[4455667788],90658,CPT,Influenza vaccine
+DEMO SERVICE 10,115.00,180.00,[5566778899],99214,CPT,"Established patient visit, moderate"
