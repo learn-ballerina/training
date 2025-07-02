@@ -22,7 +22,7 @@ function mapHealthEventToFhirClaim(HealthEvent healthEvent) returns internationa
     insurance: [],
     provider: {
         identifier: {
-            value: healthEvent.out_of_network[0].allowed_amounts[0].payments[0].providers[0].npi.toString(),
+            value: "Demo Provider NPI",
             system: "http://hl7.org/fhir/sid/us-npi"
         }
     },
