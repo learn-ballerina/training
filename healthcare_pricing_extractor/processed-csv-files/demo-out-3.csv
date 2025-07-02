@@ -1,0 +1,10 @@
+name,allowed_amount,billed_charge,npi,billing_code,billing_code_type,description
+"MRI, Brain",500.00,950.00,[1010101010],70553,CPT,MRI of brain with and without contrast
+"MRI, Brain",470.00,900.00,[2020202020],70553,CPT,MRI of brain with and without contrast
+"MRI, Brain",495.00,930.00,[3030303030],70553,CPT,MRI of brain with and without contrast
+"Colonoscopy, Diagnostic",1100.00,1800.00,[4040404040],45378,CPT,"Colonoscopy, diagnostic with or without specimen"
+"Colonoscopy, Diagnostic",975.00,1600.00,[5050505050],45378,CPT,"Colonoscopy, diagnostic with or without specimen"
+"Colonoscopy, Diagnostic",990.00,1650.00,[6060606060],45378,CPT,"Colonoscopy, diagnostic with or without specimen"
+"Chest X-Ray, 2 views",55.00,110.00,[7070707070],71046,CPT,"Radiologic exam, chest; 2 views"
+"Chest X-Ray, 2 views",52.00,105.00,[8080808080],71046,CPT,"Radiologic exam, chest; 2 views"
+"Chest X-Ray, 2 views",60.00,115.00,[9090909090],71046,CPT,"Radiologic exam, chest; 2 views"

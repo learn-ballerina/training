@@ -1,0 +1,80 @@
+{
+  "reporting_entity_name": "Mini Health Plan",
+  "reporting_entity_type": "Health Insurance Issuer",
+  "last_updated_on": "2025-07-01",
+  "version": "1.0.0",
+  "out_of_network": [
+    {
+      "name": "Basic Office Visit",
+      "billing_code": "99213",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2025",
+      "description": "Established patient, 15 minutes",
+      "allowed_amounts": [
+        {
+          "tin": {
+            "type": "ein",
+            "value": "101010101"
+          },
+          "billing_class": "professional",
+          "payments": [
+            {
+              "allowed_amount": 80.00,
+              "providers": [
+                {
+                  "billed_charge": 140.00,
+                  "npi": [1234567890]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tin": {
+            "type": "ein",
+            "value": "202020202"
+          },
+          "billing_class": "professional",
+          "payments": [
+            {
+              "allowed_amount": 78.50,
+              "providers": [
+                {
+                  "billed_charge": 135.00,
+                  "npi": [2345678901]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Flu Shot",
+      "billing_code": "90658",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2025",
+      "description": "Influenza virus vaccine",
+      "allowed_amounts": [
+        {
+          "tin": {
+            "type": "ein",
+            "value": "303030303"
+          },
+          "billing_class": "facility",
+          "payments": [
+            {
+              "allowed_amount": 25.00,
+              "providers": [
+                {
+                  "billed_charge": 65.00,
+                  "npi": [3456789012]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

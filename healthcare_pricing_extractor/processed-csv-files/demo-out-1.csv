@@ -1,0 +1,4 @@
+name,allowed_amount,billed_charge,npi,billing_code,billing_code_type,description
+Basic Office Visit,80.00,140.00,[1234567890],99213,CPT,"Established patient, 15 minutes"
+Basic Office Visit,78.50,135.00,[2345678901],99213,CPT,"Established patient, 15 minutes"
+Flu Shot,25.00,65.00,[3456789012],90658,CPT,Influenza virus vaccine
