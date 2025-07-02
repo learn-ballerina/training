@@ -1,0 +1,278 @@
+{
+  "reporting_entity_name": "Demo Health Plan",
+  "reporting_entity_type": "Health Insurance Issuer",
+  "last_updated_on": "2025-07-01",
+  "version": "1.0.0",
+  "out_of_network": [
+    {
+      "name": "DEMO SERVICE 1",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2025",
+      "billing_code": "99213",
+      "description": "Office visit, established patient",
+      "allowed_amounts": [
+        {
+          "tin": {
+            "type": "ein",
+            "value": "123456789"
+          },
+          "billing_class": "professional",
+          "payments": [
+            {
+              "allowed_amount": 85.00,
+              "providers": [
+                {
+                  "billed_charge": 150.00,
+                  "npi": [1234567890]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DEMO SERVICE 2",
+      "billing_code": "87070",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2025",
+      "description": "Culture, bacterial; any source",
+      "allowed_amounts": [
+        {
+          "tin": {
+            "type": "ein",
+            "value": "987654321"
+          },
+          "billing_class": "facility",
+          "payments": [
+            {
+              "allowed_amount": 32.00,
+              "providers": [
+                {
+                  "billed_charge": 70.00,
+                  "npi": [1122334455]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DEMO SERVICE 3",
+      "billing_code": "80050",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2025",
+      "description": "General health panel",
+      "allowed_amounts": [
+        {
+          "tin": {
+            "type": "ein",
+            "value": "112233445"
+          },
+          "billing_class": "professional",
+          "payments": [
+            {
+              "allowed_amount": 95.50,
+              "providers": [
+                {
+                  "billed_charge": 180.00,
+                  "npi": [5566778899]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DEMO SERVICE 4",
+      "billing_code": "81001",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2025",
+      "description": "Urinalysis, automated",
+      "allowed_amounts": [
+        {
+          "tin": {
+            "type": "ein",
+            "value": "998877665"
+          },
+          "billing_class": "facility",
+          "payments": [
+            {
+              "allowed_amount": 15.00,
+              "providers": [
+                {
+                  "billed_charge": 50.00,
+                  "npi": [6677889900]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DEMO SERVICE 5",
+      "billing_code": "93000",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2025",
+      "description": "Electrocardiogram",
+      "allowed_amounts": [
+        {
+          "tin": {
+            "type": "ein",
+            "value": "556677889"
+          },
+          "billing_class": "professional",
+          "payments": [
+            {
+              "allowed_amount": 45.00,
+              "providers": [
+                {
+                  "billed_charge": 110.00,
+                  "npi": [9988776655]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DEMO SERVICE 6",
+      "billing_code": "99203",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2025",
+      "description": "New patient office visit, 30 min",
+      "allowed_amounts": [
+        {
+          "tin": {
+            "type": "ein",
+            "value": "111222333"
+          },
+          "billing_class": "professional",
+          "payments": [
+            {
+              "allowed_amount": 105.00,
+              "providers": [
+                {
+                  "billed_charge": 160.00,
+                  "npi": [1112223334]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DEMO SERVICE 7",
+      "billing_code": "36415",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2025",
+      "description": "Venipuncture, routine",
+      "allowed_amounts": [
+        {
+          "tin": {
+            "type": "ein",
+            "value": "222333444"
+          },
+          "billing_class": "facility",
+          "payments": [
+            {
+              "allowed_amount": 10.00,
+              "providers": [
+                {
+                  "billed_charge": 40.00,
+                  "npi": [2233445566]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DEMO SERVICE 8",
+      "billing_code": "74177",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2025",
+      "description": "CT scan abdomen/pelvis",
+      "allowed_amounts": [
+        {
+          "tin": {
+            "type": "ein",
+            "value": "333444555"
+          },
+          "billing_class": "facility",
+          "payments": [
+            {
+              "allowed_amount": 420.00,
+              "providers": [
+                {
+                  "billed_charge": 800.00,
+                  "npi": [3344556677]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DEMO SERVICE 9",
+      "billing_code": "90658",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2025",
+      "description": "Influenza vaccine",
+      "allowed_amounts": [
+        {
+          "tin": {
+            "type": "ein",
+            "value": "444555666"
+          },
+          "billing_class": "professional",
+          "payments": [
+            {
+              "allowed_amount": 35.00,
+              "providers": [
+                {
+                  "billed_charge": 75.00,
+                  "npi": [4455667788]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DEMO SERVICE 10",
+      "billing_code": "99214",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2025",
+      "description": "Established patient visit, moderate",
+      "allowed_amounts": [
+        {
+          "tin": {
+            "type": "ein",
+            "value": "555666777"
+          },
+          "billing_class": "professional",
+          "payments": [
+            {
+              "allowed_amount": 115.00,
+              "providers": [
+                {
+                  "billed_charge": 180.00,
+                  "npi": [5566778899]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

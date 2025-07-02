@@ -1,0 +1,159 @@
+{
+  "reporting_entity_name": "Demo Health Network",
+  "reporting_entity_type": "Health Insurance Issuer",
+  "last_updated_on": "2025-07-01",
+  "version": "1.0.1",
+  "out_of_network": [
+    {
+      "name": "MRI, Brain",
+      "billing_code": "70553",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2025",
+      "description": "MRI of brain with and without contrast",
+      "allowed_amounts": [
+        {
+          "tin": { "type": "ein", "value": "123123123" },
+          "billing_class": "facility",
+          "payments": [
+            {
+              "allowed_amount": 500.00,
+              "providers": [
+                {
+                  "billed_charge": 950.00,
+                  "npi": [1010101010]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tin": { "type": "ein", "value": "456456456" },
+          "billing_class": "professional",
+          "payments": [
+            {
+              "allowed_amount": 470.00,
+              "providers": [
+                {
+                  "billed_charge": 900.00,
+                  "npi": [2020202020]
+                }
+              ]
+            },
+            {
+              "allowed_amount": 495.00,
+              "providers": [
+                {
+                  "billed_charge": 930.00,
+                  "npi": [3030303030]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Colonoscopy, Diagnostic",
+      "billing_code": "45378",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2025",
+      "description": "Colonoscopy, diagnostic with or without specimen",
+      "allowed_amounts": [
+        {
+          "tin": { "type": "ein", "value": "321321321" },
+          "billing_class": "facility",
+          "payments": [
+            {
+              "allowed_amount": 1100.00,
+              "providers": [
+                {
+                  "billed_charge": 1800.00,
+                  "npi": [4040404040]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tin": { "type": "ein", "value": "654654654" },
+          "billing_class": "professional",
+          "payments": [
+            {
+              "allowed_amount": 975.00,
+              "providers": [
+                {
+                  "billed_charge": 1600.00,
+                  "npi": [5050505050]
+                }
+              ]
+            },
+            {
+              "allowed_amount": 990.00,
+              "providers": [
+                {
+                  "billed_charge": 1650.00,
+                  "npi": [6060606060]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chest X-Ray, 2 views",
+      "billing_code": "71046",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2025",
+      "description": "Radiologic exam, chest; 2 views",
+      "allowed_amounts": [
+        {
+          "tin": { "type": "ein", "value": "777888999" },
+          "billing_class": "facility",
+          "payments": [
+            {
+              "allowed_amount": 55.00,
+              "providers": [
+                {
+                  "billed_charge": 110.00,
+                  "npi": [7070707070]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tin": { "type": "ein", "value": "888999000" },
+          "billing_class": "professional",
+          "payments": [
+            {
+              "allowed_amount": 52.00,
+              "providers": [
+                {
+                  "billed_charge": 105.00,
+                  "npi": [8080808080]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tin": { "type": "ein", "value": "999000111" },
+          "billing_class": "professional",
+          "payments": [
+            {
+              "allowed_amount": 60.00,
+              "providers": [
+                {
+                  "billed_charge": 115.00,
+                  "npi": [9090909090]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
