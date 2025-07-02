@@ -110,6 +110,23 @@ processedCsvPath + mrfFilePath.substring(startIndex, lastIndex) + ".csv"
     path: csvFileName (call `getCsvFileName` step 10 to get this)
     content: `HealthEventCsv[]`
 
+### 13. Create a data mapper function `mapOutNetworkItemToFhirClaimItem`
+
+![img.png](img.png)
+
+### 14. Create a data mapper function `mapHealthEventToFhirClaimItems`
+
+```
+    from Allowed_amountsItem allowedAmount in item.allowed_amounts
+    from PaymentsItem paymentsItem in allowedAmount.payments
+    from ProvidersItem provider in paymentsItem.providers
+    select mapOutNetworkItemToFhirClaimItem(item, paymentsItem.allowed_amount, provider.billed_charge, provider.npi.toString());
+```
+
+### 14. Create a data mapper function `mapHealthEventToFhirClaim`
+
+Let's use the first 
+
 ### 13. Push to FHIR Server
 
 - create a data mapper to do the MRF to fhir:Claim transformation
